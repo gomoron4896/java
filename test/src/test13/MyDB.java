@@ -5,9 +5,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
 
 public class MyDB {
-	
+//	public int excuteWhich(String sql) {
+//		return Connection
+//	}
 	
 	public static void main(String[] args) {
 		Connection con;
@@ -18,6 +21,7 @@ public class MyDB {
 			Class.forName("org.mariadb.jdbc.Driver"); // jdbc 드라이버 불러오기
 			con = DriverManager.getConnection(url, id, pwd); // 
 			Statement stmt = con.createStatement();
+			Scanner scan = new Scanner(System.in);
 			String sql;
 //			sql = "delete from user_info where uNum=1";
 //			sql = "insert into user_info(uName, uAge, uAddress, uEtc)";
